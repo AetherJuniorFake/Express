@@ -1,0 +1,33 @@
+<% include _header%>
+    <h1><%= title %></h1>
+    <table class="table table-striped">
+      <tr>
+          <th>Nomre</th>
+          <th>Email</th>
+          <th>Tipo</th>
+          <th>Acciones</th>
+          <th>Editar</th>
+      </tr>
+
+    <h2>Lista de zombies</h2>
+    <%
+      if(coleccion){
+        coleccion.forEach(function(zombie){
+    %>
+    <tr>
+      <td><%=zombie.name%></td>
+      <td><%=zombie.email%></td>
+      <td><%=zombie.type%></td>
+      <td>
+        <a href="/zombies/edit/<%= zombie.id %>" <i class="fas fa-edit" title="Editar"></i></a>
+        <a href="/zombies/delete/<%= zombie.id %>" <i class="fas fa-trash text-danger" title="Eliminar"></i></a>
+        
+      </td>
+    </tr>
+    <%
+
+     });}
+    %>
+  </table>
+  
+  <% include _footer%>

@@ -1,0 +1,41 @@
+<% include _header%>
+<div class="row container">
+    <div class="col-md-12">
+        <form action="new" method="POST">
+                <div class="from-goup">
+                    <label for="">Nombre</label>
+                    <input type="text" class="from-control" name="name">
+                </div>
+
+                <div class="from-goup">
+                    <label for="">E-mail</label>
+                    <input type="text" class="from-control" name="email">
+                </div>
+
+                <div class="from-goup">
+                    <label for="">Tipo</label>
+                    <input type="text" class="from-control" name="type">
+                </div>
+
+                <% if(mensajeError.length > 0) { %>
+
+                <div class="aletr alert-danger">
+                    <%= mensajeError %>
+                </div>
+                <% } %>
+
+                <% if(mensajeExitoso.length > 0) { %>
+
+                    <div class="aletr alert-success">
+                        <%= mensajeExitoso %>
+                    </div>
+                <% } %>
+            
+            <button class="btn btn-prymary">Agregar Zombie</button>
+            </form>
+    </div>
+
+</div>
+
+
+<% include _footer%>

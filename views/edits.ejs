@@ -1,0 +1,27 @@
+<% include _header%>
+<div class="row container">
+    <div class="col-md-12">
+        <form action="/zombies/edit/<%= zombie.id %>?_method=PUT" method="POST">
+                <div class="from-goup">
+                    <label for="">Nombre</label>
+                    <input type="text" class="from-control" name="name" value=" <%= zombie.name %>">
+                </div>
+
+                <div class="from-goup">
+                    <label for="">E-mail</label>
+                    <input type="text" class="from-control" name="email" value=" <%= zombie.email %>">
+                </div>
+
+                <div class="from-goup">
+                    <label for="">Tipo</label>
+                    <input type="text" class="from-control" name="type" value=" <%= zombie.type %>">
+                </div>
+            
+            <button class="btn btn-prymary">Editar Zombie</button>
+            </form>
+    </div>
+
+</div>
+
+
+<% include _footer%>

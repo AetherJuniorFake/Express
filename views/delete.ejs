@@ -1,0 +1,27 @@
+<% include _header%>
+<div class="row container">
+    <div class="col-md-12">
+        <form action="/zombies/delete/<%= zombie.id %>?_method=DELETE" method="POST">
+                <div class="from-goup">
+                    <label for="">Nombre</label>
+                    <input type="text" class="from-control" name="name" value=" <%= zombie.name %>" disabled>
+                </div>
+
+                <div class="from-goup">
+                    <label for="">E-mail</label>
+                    <input type="text" class="from-control" name="email" value=" <%= zombie.email %>" disabled>
+                </div>
+
+                <div class="from-goup">
+                    <label for="">Tipo</label>
+                    <input type="text" class="from-control" name="type" value=" <%= zombie.type %>" disabled> 
+                </div>
+            
+            <button class="btn btn-danger">Eliminar Zombie</button>
+            </form>
+    </div>
+
+</div>
+
+
+<% include _footer%>

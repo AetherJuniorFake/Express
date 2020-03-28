@@ -1,0 +1,46 @@
+<% include _header%>
+<div class="row container">
+    <div class="col-md-12">
+        <form action="/cerebros/new" method="POST">
+                <div class="from-goup">
+                    <label for="">Savor</label>
+                    <input type="text" class="from-control" name="flavor">
+                </div>
+
+                <div class="from-goup">
+                    <label for="">Descripcion</label>
+                    <input type="text" class="from-control" name="descripcion">
+                </div>
+
+                <div class="from-goup">
+                    <label for="">Iq</label>
+                    <input type="text" class="from-control" name="iq">
+                </div>
+
+                <div class="from-goup">
+                    <label for="">Imagen</label>
+                    <input type="text" class="from-control" name="picture">
+                </div>
+
+                <% if(mensajeError.length > 0) { %>
+
+                    <div class="aletr alert-danger">
+                        <%= mensajeError %>
+                    </div>
+                    <% } %>
+    
+                    <% if(mensajeExitoso.length > 0) { %>
+    
+                        <div class="aletr alert-success">
+                            <%= mensajeExitoso %>
+                        </div>
+                    <% } %>
+            
+            <button class="btn btn-prymary">Agregar Cerebro</button>
+            </form>
+    </div>
+
+</div>
+
+
+<% include _footer%>
